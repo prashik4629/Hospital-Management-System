@@ -81,10 +81,7 @@ function Appointments() {
     try {
 
       // Convert HH:mm → HH:mm:ss
-      const formattedTime =
-        form.appointmentTime.length === 5
-          ? `${form.appointmentTime}:00`
-          : form.appointmentTime;
+      const formattedTime = `${form.appointmentTime}:00`;
 
 
           const payload = {
@@ -219,12 +216,13 @@ function Appointments() {
           min={new Date().toISOString().split('T')[0]}
         />
 
-        <input
-          type="time"
-          name="appointmentTime"
-          value={form.appointmentTime}
-          onChange={handleChange}
-        />
+       <input
+  type="time"
+  name="appointmentTime"
+  value={form.appointmentTime}
+  onChange={handleChange}
+  required
+/>
 
         <input
           type="text"
