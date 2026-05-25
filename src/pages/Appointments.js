@@ -86,12 +86,25 @@ function Appointments() {
           ? `${form.appointmentTime}:00`
           : form.appointmentTime;
 
-      const payload = {
-        appointmentDate: form.appointmentDate,
-        appointmentTime: formattedTime,
-        reason: form.reason,
-        notes: form.notes,
-      };
+
+          const payload = {
+
+  patient: {
+    id: form.patientId
+  },
+
+  doctor: {
+    id: form.doctorId
+  },
+
+  appointmentDate: form.appointmentDate,
+
+  appointmentTime: formattedTime,
+
+  reason: form.reason,
+
+  notes: form.notes
+};
 
       const response = await axios.post(
         `${API}?patientId=${form.patientId}&doctorId=${form.doctorId}`,
