@@ -1,245 +1,70 @@
-# 🏥 Hospital Management System
+# Getting Started with Create React App
 
-<div align="center">
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Hospital Management System](https://img.shields.io/badge/Hospital-Management%20System-blue?style=for-the-badge&logo=react)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.14-brightgreen?style=for-the-badge&logo=springboot)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge&logo=mysql)
-![Java](https://img.shields.io/badge/Java-21-red?style=for-the-badge&logo=openjdk)
-![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge&logo=vercel)
-![Render](https://img.shields.io/badge/Backend-Render-purple?style=for-the-badge&logo=render)
+## Available Scripts
 
-### A Full Stack Hospital Management System built with Spring Boot & React.js
+In the project directory, you can run:
 
-[🌐 Live Demo](https://hospital-management-system-orx5mbb9n-prashik4629s-projects.vercel.app) • [🔗 API](https://hospital-management-system-82hn.onrender.com) • [📂 Repository](https://github.com/prashik4629/Hospital-Management-System)
+### `npm start`
 
-</div>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## ✨ Features
+### `npm test`
 
-- 🧑‍⚕️ **Patient Management** — Add, View, Delete patients
-- 👨‍⚕️ **Doctor Management** — Add, View, Delete doctors
-- 📊 **Dashboard** — Live counts of patients and doctors from database
-- 🔍 **Search** — Search patients by name
-- 🌐 **REST APIs** — Full CRUD operations
-- ☁️ **Cloud Deployed** — Live on the internet!
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-## 🛠️ Tech Stack
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Frontend
-| Technology | Purpose |
-|---|---|
-| React.js | UI Framework |
-| Axios | API calls to backend |
-| React Router DOM | Page navigation |
-| CSS | Styling |
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Backend
-| Technology | Purpose |
-|---|---|
-| Java 21 | Programming Language |
-| Spring Boot 3.5 | Backend Framework |
-| Spring Data JPA | Database ORM |
-| Spring Security | Authentication |
-| Maven | Build Tool |
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Database & Deployment
-| Technology | Purpose |
-|---|---|
-| MySQL | Database |
-| Aiven | Cloud MySQL Hosting |
-| Vercel | Frontend Deployment |
-| Render | Backend Deployment |
-| GitHub | Version Control |
+### `npm run eject`
 
----
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## 🏗️ Architecture
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```
-┌─────────────────────────────────────────┐
-│         React.js Frontend               │
-│         (Vercel - Port 3000)            │
-│   Dashboard | Patients | Doctors        │
-└──────────────────┬──────────────────────┘
-                   │ Axios HTTP Calls
-                   ▼
-┌─────────────────────────────────────────┐
-│       Spring Boot Backend               │
-│       (Render - Port 8080)              │
-│  Controller → Service → Repository      │
-└──────────────────┬──────────────────────┘
-                   │ JPA / Hibernate
-                   ▼
-┌─────────────────────────────────────────┐
-│         MySQL Database                  │
-│         (Aiven Cloud)                   │
-│      patients | doctors tables          │
-└─────────────────────────────────────────┘
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## 📁 Project Structure
+## Learn More
 
-```
-Hospital-Management-System/
-│
-├── hms-backend/                          # Spring Boot Backend
-│   ├── src/main/java/com/hospital/
-│   │   ├── entity/
-│   │   │   ├── Patient.java             # Patient entity/table
-│   │   │   └── Doctor.java              # Doctor entity/table
-│   │   ├── repository/
-│   │   │   ├── PatientRepository.java   # DB queries for patients
-│   │   │   └── DoctorRepository.java    # DB queries for doctors
-│   │   ├── service/
-│   │   │   ├── PatientService.java      # Business logic
-│   │   │   └── DoctorService.java       # Business logic
-│   │   ├── controller/
-│   │   │   ├── PatientController.java   # REST API endpoints
-│   │   │   └── DoctorController.java    # REST API endpoints
-│   │   └── SecurityConfig.java          # Security configuration
-│   ├── src/main/resources/
-│   │   └── application.properties       # Database config
-│   └── Dockerfile                        # Docker config for deployment
-│
-└── hms-frontend/                         # React.js Frontend
-    ├── src/
-    │   ├── pages/
-    │   │   ├── Dashboard.js             # Dashboard page
-    │   │   ├── Patients.js              # Patients page
-    │   │   └── Doctors.js               # Doctors page
-    │   ├── App.js                        # Main app with routing
-    │   └── index.css                     # Global styles
-    └── package.json
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
----
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## 🚀 REST API Endpoints
+### Code Splitting
 
-### Patient APIs
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/api/patients` | Get all patients |
-| `GET` | `/api/patients/{id}` | Get patient by ID |
-| `POST` | `/api/patients` | Add new patient |
-| `PUT` | `/api/patients/{id}` | Update patient |
-| `DELETE` | `/api/patients/{id}` | Delete patient |
-| `GET` | `/api/patients/search?name=` | Search by name |
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Doctor APIs
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/api/doctors` | Get all doctors |
-| `GET` | `/api/doctors/{id}` | Get doctor by ID |
-| `POST` | `/api/doctors` | Add new doctor |
-| `PUT` | `/api/doctors/{id}` | Update doctor |
-| `DELETE` | `/api/doctors/{id}` | Delete doctor |
-| `GET` | `/api/doctors/search?name=` | Search by name |
+### Analyzing the Bundle Size
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## ⚙️ Run Locally
+### Making a Progressive Web App
 
-### Prerequisites
-- Java 21+
-- Node.js 18+
-- MySQL 8.0+
-- Maven
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Backend Setup
-```bash
-# Clone the repo
-git clone https://github.com/prashik4629/Hospital-Management-System.git
+### Advanced Configuration
 
-# Go to backend folder
-cd Hospital-Management-System/hms-backend
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-# Create MySQL database
-mysql -u root -p
-CREATE DATABASE hms_db;
+### Deployment
 
-# Update application.properties with your DB credentials
-# Then run
-./mvnw spring-boot:run
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Backend runs on: `http://localhost:8080`
+### `npm run build` fails to minify
 
-### Frontend Setup
-```bash
-# Go to frontend folder
-cd Hospital-Management-System/hms-frontend
-
-# Install dependencies
-npm install
-
-# Start the app
-npm start
-```
-
-Frontend runs on: `http://localhost:3000`
-
----
-
-## 🌐 Live Deployment
-
-| Service | URL |
-|---|---|
-| 🎨 Frontend | [hospital-management-system.vercel.app](https://hospital-management-system-orx5mbb9n-prashik4629s-projects.vercel.app) |
-| ⚙️ Backend API | [hospital-management-system.onrender.com](https://hospital-management-system-82hn.onrender.com) |
-| 🗄️ Database | Aiven Cloud MySQL |
-
----
-
-## 📸 Screenshots
-
-### Dashboard
-> Live counts of patients and doctors fetched from MySQL database
-
-### Patients Page
-> Add new patients with name, age, disease, doctor, phone and address
-
-### Doctors Page
-> Add new doctors with name, specialization, experience, phone and email
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 👨‍💻 Developer
-
-**Prashik Meshram**
-
-[![GitHub](https://img.shields.io/badge/GitHub-prashik4629-black?style=flat-square&logo=github)](https://github.com/prashik4629)
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-
-Made with ❤️ by Prashik Meshram
-
-⭐ Star this repo if you found it helpful!
-
-</div>
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
